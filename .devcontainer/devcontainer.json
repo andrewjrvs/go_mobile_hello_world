@@ -11,7 +11,9 @@
 			"VARIANT": "1-bullseye",
 			// Options
 			"NODE_VERSION": "lts/*",
-			"ANDROID_VERSION": "28"
+			"ANDROID_VERSION": "28",
+			"ANDROID_BUILD_TOOLS_VERSION": "30.0.2",
+			"NDK_VER": "23.1.7779620"
 		}
 	},
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],

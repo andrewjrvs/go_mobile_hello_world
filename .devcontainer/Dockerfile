@@ -37,7 +37,7 @@ RUN $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "build-tools;${ANDROID_BUI
     "platform-tools"
 
 # Install NDK
-ENV NDK_VER="19.2.5345600"
+ARG NDK_VER="19.2.5345600"
 RUN $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "ndk;$NDK_VER"
 RUN ln -sf $ANDROID_HOME/ndk/$NDK_VER $ANDROID_HOME/ndk-bundle
 
