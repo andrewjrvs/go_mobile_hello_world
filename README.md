@@ -16,3 +16,22 @@ run the following code - then copy the basic.apk onto a mobile device
 go get -d golang.org/x/mobile/example/basic
 gomobile build golang.org/x/mobile/example/basic # will build an APK
 ```
+
+## tests
+
+### fyne
+
+```
+apt-get install xorg-dev
+go get fyne.io/fyne/v2/cmd/fyne_demo/
+```
+
+### qt
+
+<https://github.com/therecipe/qt/wiki/Installation>
+
+```
+sudo apt-get install libqt5quickcontrols2-5 libqt5multimedia5 libqt5webengine5 libqt5quick5 libqt5qml5
+export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
+github.com/therecipe/examples/basic/widgets
+```
