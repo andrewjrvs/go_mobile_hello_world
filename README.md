@@ -35,3 +35,10 @@ sudo apt-get install libqt5quickcontrols2-5 libqt5multimedia5 libqt5webengine5 l
 export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/... && $(go env GOPATH)/bin/qtsetup test && $(go env GOPATH)/bin/qtsetup -test=false
 github.com/therecipe/examples/basic/widgets
 ```
+
+for windows?
+```
+apt-get install gcc-multilib
+apt-get install gcc-mingw-w64
+#GOOS=windows GOARCH=amd64 CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc 
+```
