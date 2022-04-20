@@ -1,0 +1,8 @@
+Website = "https://cvbn.us"
+
+[Details]
+  Icon = "Icon.png"
+  Name = "Button Quest"
+  ID = "us.cvbn.button_quest"
+  Version = "1.0.0"
+  Build = 50

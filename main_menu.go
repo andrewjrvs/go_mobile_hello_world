@@ -7,10 +7,10 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-func GetMainMenu(app *fyne.App, w *fyne.Window) *fyne.MainMenu {
+func GetMainMenu(app *fyne.App, w *fyne.Window, fn func(string)) *fyne.MainMenu {
 	// Main menu
 	fileMenu := fyne.NewMenu("File",
-		fyne.NewMenuItem("Quit", func() { (*app).Quit() }),
+		fyne.NewMenuItem("Quit", func() { topWindow.Close() }),
 	)
 
 	helpMenu := fyne.NewMenu("Help",
@@ -22,7 +22,18 @@ func GetMainMenu(app *fyne.App, w *fyne.Window) *fyne.MainMenu {
 			), *w)
 		}),
 		fyne.NewMenuItemSeparator(),
-		fyne.NewMenuItem("Other", func() {}),
+		fyne.NewMenuItem("Other", func() {
+			fn("other")
+		}),
+		fyne.NewMenuItem("debug", func() {
+			fn("debug")
+		}),
+		fyne.NewMenuItem("home", func() {
+			fn("home")
+		}),
+		fyne.NewMenuItem("save", func() {
+			fn("save")
+		}),
 	)
 	mainMenu := fyne.NewMainMenu(
 		fileMenu,

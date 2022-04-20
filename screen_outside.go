@@ -56,9 +56,9 @@ func outsideScreen(_ fyne.Window, player binding.ExternalUntyped) fyne.CanvasObj
 		playerInfo.Refresh()
 	}, color.NRGBA{R: 200, G: 200, B: 200, A: 255})
 
-	return container.NewCenter(container.NewVBox(
+	return container.NewVBox(
 		playerInfo,
 		progress,
 		fightBtn,
-	))
+	)
 }
