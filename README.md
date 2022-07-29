@@ -42,3 +42,4 @@ apt-get install gcc-multilib
 apt-get install gcc-mingw-w64
 #GOOS=windows GOARCH=amd64 CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc 
 ```
+https://dev.to/aurelievache/learning-go-by-examples-part-7-create-a-cross-platform-gui-desktop-app-in-go-44j1
